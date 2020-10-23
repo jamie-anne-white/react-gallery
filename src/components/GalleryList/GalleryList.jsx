@@ -20,7 +20,9 @@ class GalleryList extends Component {
             //   <GalleryItem key={picture.id} picture={picture} galleryList={this.props.galleryList}/>
             <GalleryItem key={picture.id} 
             picture={picture}
-            addLike={this.props.addLike}/>
+            // addLike={this.props.addLike}/>
+            addLike={this.props.addLike}
+            deleteImage={this.props.deleteImage}/>
           )
       })}
   

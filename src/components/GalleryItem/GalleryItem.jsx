@@ -27,6 +27,9 @@ render() {
                     : <p onClick={this.flipView}>{this.props.picture.description}</p>}
           <p>{this.props.picture.likes} likes!</p>
           <button onClick={() => this.props.addLike(this.props.picture)}>Like</button>
+          <button className="btn btn-danger btn-sm" 
+                onClick={() => this.props.deleteImage(this.props.picture.id)}>Delete</button>
+                <br />
           </div>
       </>
   );
