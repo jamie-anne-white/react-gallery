@@ -31,9 +31,27 @@ router.get('/', (req, res) => {
     .then(result => {
         res.send(result.rows);
     }).catch(error => {
-        console.log('error in sql query', queryText, error);
+        console.log('error in GET error', error);
         res.sendStatus(500);
     })
 }); // END GET Route
+
+//POST route
+router.post('/', (req, res) => {
+    console.log(req.body);
+    let path = req.body.newImage.newPath;
+    let description = req.body.newImage.newDescription;
+
+    let queryText = `INSERT INTO "gallery" ("path", "description")
+    VALUES($1, $2);`;
+
+    pool.query(queryText, [path, description])
+    .then(result => {
+        res.sendStatus(201);
+    }).catch(error => {
+        console.log('error in POST', error);
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;
