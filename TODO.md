@@ -9,19 +9,19 @@
 
 [x] `npm install nodemon --global`
 [x] npm install 
-[] npm run server
-[] npm run client 
-[] npm run server (in new terminal tab)
+[x] npm run server
+[x] npm run client 
+[x] npm run server (in new terminal tab)
 
 
-[] MODULES
-    [] Data in gallery.data.js
-    [] Create pool.js
+[x] MODULES
+    [x] Data in gallery.data.js
+    [x] Create pool.js
 
-[] COMPONENTS
-    [] GalleryForm
-    [] GalleryItem
-    [] GalleryList
+[x] COMPONENTS
+    [x] GalleryForm
+    [x] GalleryItem
+    [x] GalleryList
     [] Header
 
 

@@ -16,4 +16,17 @@ img {
 .descText {
     padding: 50px 0px;
     margin-bottom: 0px;
+    padding-top: 5em;
+    margin-bottom: 3px;
+
 } 
+
+button {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-top: .2em;
+    
+}
