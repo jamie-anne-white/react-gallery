@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
+import './GalleryList.css'
 
 
 
@@ -12,6 +13,8 @@ class GalleryList extends Component {
         console.log(this.props);
       return (
       <>
+            <div className="gallery">
+
               {this.props.galleryList.map( (picture) => {
           return (
             //   <GalleryItem key={picture.id} picture={picture} galleryList={this.props.galleryList}/>
@@ -21,6 +24,7 @@ class GalleryList extends Component {
           )
       })}
   
+        </div>
         </>
           
       );
