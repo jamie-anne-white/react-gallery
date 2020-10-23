@@ -23,8 +23,8 @@ render() {
       <>
       <div className='gallery-block'>
           {this.state.isPhoto ?
-              <img src={this.props.picture.path} onClick={this.flipView} alt={this.props.picture.description}/>
-              : <p onClick={this.flipView}>{this.props.picture.description}</p>}
+                    <img src={this.props.picture.path} onClick={this.flipView} alt={this.props.picture.description}/>
+                    : <p onClick={this.flipView}>{this.props.picture.description}</p>}
           <p>{this.props.picture.likes} likes!</p>
           <button onClick={() => this.props.addLike(this.props.picture)}>Like</button>
           </div>
