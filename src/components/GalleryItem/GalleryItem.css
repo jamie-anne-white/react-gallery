@@ -1,0 +1,19 @@
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.gallery-block {
+   margin: 1em;
+}
+
+.photoDesc {
+    font-size: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.descText {
+    padding: 50px 0px;
+    margin-bottom: 0px;
+} 
