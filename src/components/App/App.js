@@ -4,7 +4,8 @@ import './App.css';
 import GalleryList from '../GalleryList/GalleryList'
 import GalleryForm from '../GalleryForm/GalleryForm.jsx'
 import Button from '@material-ui/core/Button';
-
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
 class App extends Component {
 
@@ -23,11 +24,12 @@ class App extends Component {
             .get('/gallery')
             .then(response => {
                 console.log(response.data);
-                this.setState({galleryList: response.data})
-            })
-            .catch(error => {
-                alert('error in get!')
-            })
+                this.setState({
+                  galleryList: response.data
+                })
+              }).catch(error => {
+                alert('error in get!', error)
+              })
     }
     addLike = (picture) => {
         console.log('in add like');
@@ -37,11 +39,10 @@ class App extends Component {
             .put(`/gallery/like/${id}`)
             .then(response => {
                 this.getGallery();
-            })
-            .catch(error => {
+              }).catch(error => {
                 console.log(error);
-            })
-    }
+              })
+          }
 
     addImage = (newImage) => {
         console.log('in addImage');
@@ -52,11 +53,10 @@ class App extends Component {
             .post('/gallery', newImage)
             .then(response => {
                 this.getGallery();
-            })
-            .catch(error => {
+              }).catch(error => {
                 console.log('post error', error);
-            })
-    }
+              })
+          }
 
     deleteImage = (id) => {
         console.log('ready to delete', id);
@@ -67,31 +67,35 @@ class App extends Component {
             .delete(`/gallery/${id}`)
             .then((response) => {
                 this.getGallery();
-            })
-            .catch((error) => {
+              }).catch((error) => {
                 console.log(error);
-            })
-    }
+              })
+            }
 
     render() {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h1 className="App-title">Gallery</h1>
-                </header>
 
-                <br/>
-                <GalleryForm addImage={this.addImage}/> {/* <GalleryList galleryList={this.state.galleryList} addLike={this.addLike} /> */}
-                <GalleryList
-                    galleryList={this.state.galleryList}
-                    addLike={this.addLike}
-                    deleteImage={this.deleteImage}/>
+            <Typography variant="h2">
+            A Galley of Things
+            </Typography>
+        </header>
+        <br/>
 
-                <Button variant="contained" color="primary">
-                Hello World
-                </Button>
-            </div>
-        );
-    }
+      <div id="form">
+        <br />
+        <GalleryForm addImage={this.addImage} />
+        <br />
+        </div>
+
+
+        <Divider variant="middle" />
+        <GalleryList galleryList={this.state.galleryList}
+          addLike={this.addLike}
+          deleteImage={this.deleteImage} />
+      </div>
+    );
+  }
 }
 export default App;
