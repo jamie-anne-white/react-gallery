@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './GalleryForm.css'
 
 
 class GalleryForm extends Component {
@@ -37,19 +39,16 @@ class GalleryForm extends Component {
     render() {
         return (
             <div>
-                <label>Image path:
-                </label>
-                <input
-                    type='text'
-                    value={this.state.newImage.newPath}
-                    onChange={(event) => this.handleChangeFor(event, 'newPath')}/>
-                <label>Image description:
-                </label>
-                <input
-                    type='text'
-                    name="image description"
+                <TextField id="pathInput" variant="outlined"
+                    label='Image url' value={this.state.newImage.newPath}
+                    onChange={(event) => this.handleChangeFor(event, 'newPath')} />
+                
+                <TextField id="descInput" variant="outlined"
+                    multiline rowsMax={4}
+                    label='Image description'
                     value={this.state.newImage.newDescription}
-                    onChange={(event) => this.handleChangeFor(event, 'newDescription')}/>
+                    onChange={(event) => this.handleChangeFor(event, 'newDescription')} />
+
                 <Button variant="contained" color="primary" onClick={this.handleSubmit}>Add Image</Button>
             </div>
         );
