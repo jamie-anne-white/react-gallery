@@ -38,7 +38,7 @@ class GalleryForm extends Component {
 
     render() {
         return (
-            <div>
+            <div if="formDiv">
                 <TextField id="pathInput" variant="outlined"
                     label='Image url' value={this.state.newImage.newPath}
                     onChange={(event) => this.handleChangeFor(event, 'newPath')} />

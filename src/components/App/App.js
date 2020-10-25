@@ -5,7 +5,7 @@ import GalleryList from '../GalleryList/GalleryList'
 import GalleryForm from '../GalleryForm/GalleryForm.jsx'
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import Typography from '@material-ui/core/Typography';
+import Header from '../Header/Header.jsx';
 
 class App extends Component {
 
@@ -74,26 +74,18 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
+        <div className="App">
 
-            <Typography variant="h2">
-            A Galley of Things
-            </Typography>
-        </header>
-        <br/>
-
-      <div id="form">
-        <br />
+        <Header />
         <GalleryForm addImage={this.addImage} />
-        <br />
-        </div>
 
 
         <Divider variant="middle" />
+
         <GalleryList galleryList={this.state.galleryList}
           addLike={this.addLike}
           deleteImage={this.deleteImage} />
+
       </div>
     );
   }

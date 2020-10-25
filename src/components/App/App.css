@@ -3,23 +3,25 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: black;
   height: 100px;
   padding: 40px;
-  color: white;
+  color: #ffffff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 .App-title {
   font-size: 3em;
+  font-weight: 400;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+#formDiv {
+  background-color: #e8ebd4;
+  height: 85px;
+} 
+
