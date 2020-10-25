@@ -16,7 +16,8 @@ class GalleryItem extends Component {
 
     render() {
         console.log(this.props);
-        return ( <> <div className='gallery-block'>
+        return ( 
+        <> <div className='gallery-block'>
             {this.state.isPhoto
                 ? <img
                         src={this.props.picture.path}
@@ -30,7 +31,8 @@ class GalleryItem extends Component {
                 className="btn btn-danger btn-sm"
                 onClick={() => this.props.deleteImage(this.props.picture.id)}>Delete</button>
             <br/>
-        </div> < />
+        </div> 
+        </>
   );
 }
 }
