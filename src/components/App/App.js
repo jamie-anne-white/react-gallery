@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList'
 import GalleryForm from '../GalleryForm/GalleryForm.jsx'
+import Button from '@material-ui/core/Button';
+
 
 class App extends Component {
 
@@ -77,12 +79,17 @@ class App extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Gallery</h1>
                 </header>
+
                 <br/>
                 <GalleryForm addImage={this.addImage}/> {/* <GalleryList galleryList={this.state.galleryList} addLike={this.addLike} /> */}
                 <GalleryList
                     galleryList={this.state.galleryList}
                     addLike={this.addLike}
                     deleteImage={this.deleteImage}/>
+
+                <Button variant="contained" color="primary">
+                Hello World
+                </Button>
             </div>
         );
     }

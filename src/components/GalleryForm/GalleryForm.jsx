@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Button from '@material-ui/core/Button';
+
 
 class GalleryForm extends Component {
 
@@ -48,7 +50,7 @@ class GalleryForm extends Component {
                     name="image description"
                     value={this.state.newImage.newDescription}
                     onChange={(event) => this.handleChangeFor(event, 'newDescription')}/>
-                <button onClick={this.handleSubmit}>Add Image</button>
+                <Button variant="contained" color="primary" onClick={this.handleSubmit}>Add Image</Button>
             </div>
         );
     }

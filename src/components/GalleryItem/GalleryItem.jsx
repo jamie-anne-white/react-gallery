@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import './GalleryItem.css'
+import './GalleryItem.css';
+import Button from '@material-ui/core/Button';
+
 
 class GalleryItem extends Component {
 
@@ -26,10 +28,10 @@ class GalleryItem extends Component {
                 : <p onClick={this.flipView}>{this.props.picture.description}</p>}
             <p>{this.props.picture.likes}
                 likes!</p>
-            <button onClick={() => this.props.addLike(this.props.picture)}>Like</button>
-            <button
+            <Button variant="contained" color="primary" onClick={() => this.props.addLike(this.props.picture)}>Like</Button>
+            <Button variant="contained" color="primary"
                 className="btn btn-danger btn-sm"
-                onClick={() => this.props.deleteImage(this.props.picture.id)}>Delete</button>
+                onClick={() => this.props.deleteImage(this.props.picture.id)}>Delete</Button>
             <br/>
         </div> 
         </>
